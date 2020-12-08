@@ -3,10 +3,15 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
+    
+    <!-- MÉTADONNÉES -->
     <teiHeader>
         <fileDesc>
+            
+            <!-- Titre, auteur et éditeurs du texte dans ce fichier. -->
             <titleStmt>
-                <title>René Auberjonois</title>
+                <title>René Auberjonois (version XML/TEI)</title>
+                <author>Gustave Roud</author>
                 <respStmt>
                     <resp>Direction</resp>
                     <name>Claire Jaquier</name>
@@ -21,36 +26,46 @@
                     <name>Elena Spadini</name>
                 </respStmt>
             </titleStmt>
+            
+            <!-- Infos sur la publication de ce fichier -->
             <publicationStmt>
-                <publisher>Centre des littératures en Suisse romande, Université de
-                    Lausanne</publisher>
+                <publisher>Centre des littératures en Suisse romande, Université de Lausanne</publisher>
                 <pubPlace>Lausanne</pubPlace>
-                <date>2020</date>
+                <date>202?</date>
                 <availability status="restricted">
-                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distribué
-                        avec Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
-                        Licence (CC BY-NC-SA 4.0)</licence>
+                    <p>© - Tous droits réservés. Éditions Zoé (Chemin de la Mousse 46, 1225 Chêne-Bourg/Suisse, https://www.editionszoe.ch)</p>
                 </availability>
             </publicationStmt>
-            <seriesStmt>
-                <title level="s">Œuvres complètes</title>
-                <editor>Sous la direction de Claire Jaquier et Daniel Maggetti</editor>
-                <editor>Annoté et établi par Bruno Pellegrino</editor>
-            </seriesStmt>
+            
+            <!-- Source du texte présent dans ce fichier -->
             <sourceDesc>
-                <bibl type="article">
-                    <author>Gustave Roud</author>, <title level="a">René Auberjonois</title>, <title
-                        level="j">Gazette de Lausanne</title>, <date when="1923-09-30">30 septembre
-                        1923</date>. </bibl>
+                <biblStruct>
+                    <analytic>
+                        <title level="a">René Auberjonois</title>
+                    </analytic>
+                    <monogr>
+                        <title level="s">Œuvres complètes</title>
+                        <author>Gustave Roud</author>
+                        <editor>Sous la direction de Claire Jaquier et Daniel Maggetti</editor>
+                        <imprint>
+                            <publisher>Éditions Zoé</publisher>
+                            <pubPlace>Genève</pubPlace>
+                            <date>202?</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
             </sourceDesc>
+            
         </fileDesc>
+        
     </teiHeader>
+    
+    <!-- TEXTE -->
     <text>
         <body>
-            <!-- replace all URL with ARKs -->
             <div n="Exposition">
                 <note resp="GustaveRoud">Exposition, au <placeName
-                        ref="http://rdfh.ch/0112/6E2ONBGbQCu37Hepso8ZLQ">Kunstmuseum de
+                    ref="http://ark.dasch.swiss/ark:/72163/1/0112/spvGJeOpTy2=WF1F5CH8kQM.20200121T101746657246Z">Kunstmuseum de
                         Zurich</placeName>, d’une trentaine de toiles de l’artiste, formant le
                     « troisième groupe du don d’<persName
                         ref="http://rdfh.ch/0112/XnyEtJeCToOd8nTs4QCwWg">un Bâlois ami de
@@ -187,6 +202,8 @@
                     répéterions avec moins d’amertume que nul n’est prophète en son pays, si le
                     nôtre ne répandait une telle admiration aux pieds de ses faux prophètes.</p>
             </div>
+            <!-- replace all URL with ARKs, as the first one -->
+            
         </body>
     </text>
 </TEI>
